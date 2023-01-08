@@ -1,0 +1,103 @@
+/*Global Styling*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #4158D0;
+    color: white;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+.btn {
+    margin: 0.3rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    color: white;
+    border: solid 0.2rem rgb(255, 255, 255);
+    background-color: #00000000;
+    transition: all 0.4s ease;
+}
+
+.btn:hover {
+    background-color: #f5f5f58d;
+}
+
+/*Title styling*/
+#title {
+    margin: 1rem 0rem 2rem 0rem;
+    font-size: 3rem;
+    filter: drop-shadow(1px 1px 3px #00000094);
+}
+
+demos {
+    height: 100%;
+    width: 55%;
+}
+
+.demoContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.5rem 2rem;
+    border-radius: 4rem;
+    border: solid 0.3rem rgb(255, 255, 255);
+    filter: drop-shadow(1px 1px 3px #00000094);
+    margin-bottom: 2rem;
+}
+
+.demoControls {
+    height: 100%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rangeControler {
+    margin: 0.3rem 0rem;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.optionTitle {
+    margin-right: 1.5rem;
+}
+.numberInput {
+    width: 4rem;
+    background-color: #00000000;
+    border: solid 0.1rem #ffffff;
+    box-shadow: none;
+    outline: none;
+    color: white;
+}
+
+.pythonOut {
+    text-align: center;
+    width: 35%;
+    font-size: 1.5rem;
+}
+
+#randomOutput, #randomRangeOutput {
+    font-size: 2rem;
+}

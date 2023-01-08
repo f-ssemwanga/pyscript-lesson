@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <title>Pyscript Demo</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+  </head>
+  <body>
+    <!--Python code setup-->
+    <py-script>
+        import datetime
+        from random import randint
+        import js
+
+        class App:
+            # function to get the current date and time
+            def getCurrentDateAndTime(self):
+                now = datetime.datetime.now()
+                return f"Date: {now.date()}\nTime: {str(now.time())[:8]}"
+
+            def getRandomNumber(self):
+                return randint(1, 100)
+
+            def getRandomNumberInRange(self, minVal, maxVal):
+                minVal = int(minVal)
+                maxVal = int(maxVal)
+                if minVal <= maxVal:
+                    return randint(minVal, maxVal)
+                return "Range Error"
+
+        js.app = App()
+    </py-script>
+
+    <!--site title-->
+    <h1 id="title">Pyscript Lesson</h1>
+    <demos>
+        <!--current time demo-->
+        <div id="timeContainer" class="demoContainer">
+            <div id="timeControls" class="demoControls">
+                <h2>Current time:</h2>
+                <button class="btn" id="getDateButton">Update</button>
+            </div>
+            <h3 class="pythonOut" id="timeOutput">NO DATA</h3>
+        </div>
+
+        <!--random number demo-->
+        <div id="randomContainer" class="demoContainer">
+            <div id="randomControls" class="demoControls">
+                <h2>Random Number:</h2>
+                <button class="btn" id="getRandomButton">Get random number</button>
+            </div>
+            <h3 class="pythonOut" id="randomOutput">NO DATA</h3>
+        </div>
+
+        <!--random number in range demo-->
+        <div id="randomContainer" class="demoContainer">
+            <div id="randomControls" class="demoControls">
+                <h2>Random Number:</h2>
+                <div class="rangeControler">
+                    <div class="option">
+                        <h3 class="optionTitle">Lower Bound:</h3>
+                        <input class="numberInput" type="number" id="lowerBound"  min="0" value="0">
+                    </div>
+                    <div class="option">
+                        <h3 class="optionTitle">Upper Bound:</h3>
+                        <input class="numberInput" type="number" id="upperBound" min="0" value="10">
+                    </div>
+                </div>
+                <button class="btn" id="getRandomRangeButton">Get random number</button>
+            </div>
+            <h3 class="pythonOut" id="randomRangeOutput">NO DATA</h3>
+        </div>
+    </demos>
+
+    <!--Footer-->
+    <footer>
+        <h3>Micheal Nestor &copy; 2023</h3>
+    </footer>
+    <!--Link the javascript file-->
+    <script src="./app.js"></script>
+  </body>
+</html>
