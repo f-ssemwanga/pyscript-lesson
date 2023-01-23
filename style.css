@@ -62,7 +62,14 @@ demos {
     margin-right: 2rem;
     margin-bottom: 0.5rem;
 }
-
+.advancedCalc{
+    display: block;
+    border: solid 0.3rem rgb(255, 255, 255);
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+    width:50%;
+    margin: 0 auto;
+}
 .demoControls {
    /* height: 70%;*/
     font-size: 1rem;
