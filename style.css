@@ -49,7 +49,7 @@ demos {
 
 .demoContainer {
     width: 100%;
-   flex:1 0 300px;
+   flex:1 0 400px;
     align-items: center;
     justify-content: space-evenly;
     padding: 0.5rem 2rem;
@@ -62,7 +62,7 @@ demos {
 
 .demoControls {
     height: 100%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
