@@ -40,13 +40,16 @@ body {
 }
 
 demos {
+    display: flex;
+    margin-right: -2rem;
+    /*
     height: 100%;
-    width: 55%;
+    width: 55%;*/
 }
 
 .demoContainer {
     width: 100%;
-    display: flex;
+   flex:1 0 300px;
     align-items: center;
     justify-content: space-evenly;
     padding: 0.5rem 2rem;
@@ -54,6 +57,7 @@ demos {
     border: solid 0.3rem rgb(255, 255, 255);
     filter: drop-shadow(1px 1px 3px #00000094);
     margin-bottom: 2rem;
+    margin-right: 2rem;
 }
 
 .demoControls {
@@ -97,7 +101,10 @@ demos {
     width: 35%;
     font-size: 1.5rem;
 }
-
+.pythonOut, #timeoutput{
+    width:100%;
+  
+}
 #randomOutput, #randomRangeOutput {
     font-size: 2rem;
 }
