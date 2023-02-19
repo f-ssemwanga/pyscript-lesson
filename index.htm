@@ -1,91 +1,178 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Pyscript Demo</title>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
     <link rel="stylesheet" href="./style.css" />
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <py-script type="text/pyscript" src="./pythonScript.py"></py-script>
   </head>
   <body>
     <!--Python code setup Hi -->
-    <py-script>
-        import datetime
-        import js
-
-        class App:
-            # function to get the current date and time
-            def getCurrentDateAndTime(self):
-                now = datetime.datetime.now()
-                return f"Date: {now.date()}\nTime: {str(now.time())[:8]}"
-
-        js.app = App()
-    </py-script>
-
+   
     <!--site title-->
     <h1 id="title">Pyscript Lesson</h1>
     <demos>
-        <!--current time demo-->
-        <div id="timeContainer" class="demoContainer">
-            <div id="timeControls" class="demoControls">
-                <h2>Current time:</h2>
-                <button class="btn" id="getDateButton">Update</button>
-             <h3 class="pythonOut" id="timeOutput">NO DATA</h3>    
-            </div>
-           
+      <!--current time demo-->
+      <div id="timeContainer" class="advancedCalc">
+        <div id="timeControls" class="demoControls">
+          <h2>Current time:</h2>
+          <button class="btn" id="getDateButton">Update</button>
+          <h3 class="pythonOut" id="timeOutput">NO DATA</h3>
         </div>
+      </div>
 
-        <!--random number demo-->
-        <div id="randomContainer" class="demoContainer">
-            <div id="randomControls" class="demoControls">
-                <h2>Random Number:</h2>
-                <button class="btn" id="getRandomButton">Get random number</button>
-            <h3 class="pythonOut" id="randomOutput">NO DATA</h3>
-            </div>
-            
+      <!--random number demo-->
+      <div id="randomContainer" class="advancedCalc">
+        <div id="randomControls" class="demoControls">
+          <h2>Random Number:</h2>
+          <button class="btn" id="getRandomButton">Get random number</button>
+          <h3 class="pythonOut" id="randomOutput">NO DATA</h3>
         </div>
+      </div>
 
-        <!--random number in range demo-->
-        <div id="randomContainer" class="demoContainer">
-            <div id="randomControls" class="demoControls">
-                <h2>Random Number:</h2>
-                <div class="rangeControler">
-                    <div class="option">
-                        <h3 class="optionTitle">Lower Bound:</h3>
-                        <input class="numberInput" type="number" id="lowerBound"  min="0" value="0">
-                    </div>
-                    <div class="option">
-                        <h3 class="optionTitle">Upper Bound:</h3>
-                        <input class="numberInput" type="number" id="upperBound" min="0" value="10">
-                    </div>
-                </div>
-                <button class="btn" id="getRandomRangeButton">Get random number</button>
-            <h3 class="pythonOut" id="randomRangeOutput">NO DATA</h3>    
+      <!--random number in range demo-->
+      <div id="randomContainer" class="advancedCalc">
+        <div id="randomControls" class="demoControls">
+          <h2>Random Number:</h2>
+          <div class="rangeControler">
+            <div class="option">
+              <h3 class="optionTitle">Lower Bound:</h3>
+              <input
+                class="numberInput"
+                type="number"
+                id="lowerBound"
+                min="0"
+                value="0"
+              />
             </div>
-            
-        </div>
-        <div id="randomContainer" class="demoContainer">
-            <div id="randomControls" class="demoControls">
-                <h2>Basic Calculator:</h2>
-                
-                <button class="btn" id="getRandomRangeButton">Get random number</button>
-            <h3 class="pythonOut" id="randomRangeOutput">NO DATA</h3>    
+            <div class="option">
+              <h3 class="optionTitle">Upper Bound:</h3>
+              <input
+                class="numberInput"
+                type="number"
+                id="upperBound"
+                min="0"
+                value="10"
+              />
             </div>
-            
+          </div>
+          <button class="btn" id="getRandomRangeButton">
+            Get random number
+          </button>
+          <h3 class="pythonOut" id="randomRangeOutput">NO DATA</h3>
         </div>
-        <div id="randomContainer" class="advancedCalc">
-            <div id="randomControls" class="demoControls">
-                <h2>Advanced Calculator:</h2>
-                
-                <button class="btn" id="getRandomRangeButton">Get random number</button>
-            <h3 class="pythonOut" id="randomRangeOutput">NO DATA</h3>    
+      </div>
+      <div id="randomContainerCal" class="advancedCalc">
+        <div id="randomControls" class="demoControls">
+          <h2>Basic Calculator:</h2>
+          <div  class ="calc_controls" id="basic_calc">
+             <label for="input1">Value1:</label>
+            <input type="number" id="operand1">
+               
+          <label for="input2">Value2:</label>
+          <input type="number" id="operand2" />
+          <label class="randomControls" for="operator">Operation:</label>
+            <select name="operator" id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+          </select>
+          <button class="btn" id="getBasicCalcAnswerButton">
+            Get Answer
+          </button>
+          <h3 class="pythonOut" id="basicCalcOutput">NO DATA</h3>
+          
+          </div>
+          
+        </div>
+      </div>
+      <div id="calc_Container" class="advancedCalc">
+        
+
+        <h2>Advanced Calculator:</h2>
+        
+        <div id="displayScreen" class="calc_Controls">
+          <h3 id="displayData">0</h3>
+        </div>
+        <div id="row1" class="calc_controls">
+          
+          <button class="calcbtn" id="seven">
+            7
+          </button>
+          <button class="calcbtn" id="eight">
+            8
+          </button>
+          <button class="calcbtn" id="nine">
+            9
+          </button>
+          <button class="calcbtn" id="c">
+            C
+          </button>
+          </div>
+
+          <div id="row1" class="calc_controls">
+            <button class="calcbtn" id="four">
+              4
+            </button>
+            <button class="calcbtn" id="five">
+              5
+            </button>
+            <button class="calcbtn" id="six">
+             6
+            </button>
+            <button class="calcbtn" id="times">
+             *
+            </button>
             </div>
-            
-        </div>
+            <div id="row1" class="calc_controls">
+              <button class="calcbtn" id="one">
+                1
+              </button>
+              <button class="calcbtn" id="two">
+                2
+              </button>
+              <button class="calcbtn" id="three">
+              3
+              </button>
+              <button class="calcbtn" id="divide">
+               /
+              </button>
+              </div>
+              <div id="row1" class="calc_controls">
+                <button class="calcbtn" id="zero">
+                  0
+                </button>
+                <button class="calcbtn" id="dot">
+                  .
+                </button>
+                <button class="calcbtn" id="plus">
+                 +
+                </button>
+                <button class="calcbtn" id="minus">
+                 -
+                </button>
+              </div>
+              <div id="row1" class="calc_controls">
+                <button class="calcbtn" id="perc">
+                  %
+                </button>
+                <button class="calcbtn" id="plusMinus">
+                  +/-
+                </button>
+                <button class="calcbtn" id="equals">
+                 =
+                </button>
+              
+              </div>
+      </div>
     </demos>
 
     <!--Footer-->
     <footer>
-        <h3>Micheal Nestor &copy; 2023</h3>
+      <h3>Micheal Nestor &copy; 2023</h3>
     </footer>
     <!--Link the javascript file-->
     <script src="./app.js"></script>

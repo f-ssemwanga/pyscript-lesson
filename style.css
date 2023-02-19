@@ -20,7 +20,7 @@ body {
 .btn {
     margin: 0.3rem;
     padding: 0.5rem 1rem;
-    border-radius: 2rem;
+    border-radius: 0.5rem;
     cursor: pointer;
     color: white;
     border: solid 0.2rem rgb(255, 255, 255);
@@ -29,6 +29,23 @@ body {
 }
 
 .btn:hover {
+    background-color: #f5f5f58d;
+}
+
+.calcbtn {
+    margin: 0.3rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: white;
+    border: solid 0.2rem rgb(255, 255, 255);
+    background-color: #00000000;
+    transition: all 0.4s ease;
+}
+#equals{
+    width: 33%;
+}
+.calcbtn:hover {
     background-color: #f5f5f58d;
 }
 
@@ -41,7 +58,7 @@ body {
 
 demos {
     display: flex;
-    margin-right: -2rem;
+    margin-right: 1rem;
     flex-wrap: wrap;
     /*
     height: 100%;
@@ -50,7 +67,7 @@ demos {
 
 .demoContainer {
     width: 100%;
-   flex:1 0 300px;
+   flex:1 1 200px;
     align-items: center;
     justify-content: space-evenly;
     padding: 0.5rem 2rem;
@@ -58,27 +75,55 @@ demos {
     border: solid 0.3rem rgb(255, 255, 255);
     filter: drop-shadow(1px 1px 3px #00000094);
     /*
-    margin-bottom: 2rem;*/
+    margin-bottom: 2rem;
     margin-right: 2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom:auto;
+    scroll-margin-bottom: 10px;
+    place-items: center;*/
 }
+/*
+.demoContainer2 {
+    width: 100%;
+    flex:1 5 10px;
+    justify-content:space-evenly;
+    padding: 0.5rem 1rem;
+    border-radius: .5rem;
+    border: solid 0.2rem rgb(255, 255, 255);
+    filter: drop-shadow(1px 1px 3px #00000094);
+   
+}*/
+
 .advancedCalc{
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     border: solid 0.3rem rgb(255, 255, 255);
-    padding: 0.5rem 2rem;
+    padding: 1rem 2rem;
     border-radius: 1rem;
-    width:50%;
-    margin: 0 auto;
+    width:40%;
+    min-width: 400px;
+    max-width: 400px ;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+   
+}
+.calc_controls{
+    flex: 1 1 300px;
+    justify-content: space-evenly;
 }
 .demoControls {
    /* height: 70%;*/
-    font-size: 1rem;
-    display: flex;
-    flex-direction: column;
+    font-size: 1.2rem;
+     display: flex;
+    flex-wrap: wrap;
+    flex-direction:column;
     align-items: center;
     justify-content: center;
+    
    
 }
+
 
 .rangeControler {
     margin: 0.3rem 0rem;
@@ -115,6 +160,43 @@ demos {
 .pythonOut, #timeoutput{
     width:100%;
   
+}
+#operand1, #operand2{
+    width:30%;
+    height:50px;
+    margin-right: 5rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    background-color: aquamarine;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+#operator{
+    width:30%;
+    height:50px;
+    background-color: aquamarine;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+
+#displayScreen{
+    width:80%;
+    height:50px;
+    text-align: right;
+    font-size: 1.45rem;
+    background-color: aquamarine;
+   
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    color: black;
+}
+#getBasicCalcAnswerButton{
+    width:70%;
+}
+#basicCalcOutput{
+    margin-top: 5px;
+    width: 70%;
+    text-align: centre;
 }
 #randomOutput, #randomRangeOutput {
     font-size: 2rem;
